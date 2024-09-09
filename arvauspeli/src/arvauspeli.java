@@ -7,13 +7,12 @@ public class arvauspeli {
     String nimi = ("Mika");
     String input;
 
+    do {
     System.out.println("Arvaa nimeni!");
     input = in.nextLine();
-    if (input.equals(nimi)) {
-        System.out.println("Oikein!");
-    }
-    else {
-        System.out.println("Väärin!");
-    }
+    System.out.println("Väärin! Yritä uudelleen.");
+    } while (!input.equals(nimi));
+    System.out.println("Oikein!");
+
 }
 }
