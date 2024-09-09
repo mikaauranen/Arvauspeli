@@ -6,13 +6,21 @@ public class arvauspeli {
 
     String nimi = ("Mika");
     String input;
+    int arvauksia = 0;
 
     do {
-    System.out.println("Arvaa nimeni!");
-    input = in.nextLine();
-    System.out.println("Väärin! Yritä uudelleen.");
-    } while (!input.equals(nimi));
-    System.out.println("Oikein!");
+        System.out.println("Arvaa nimeni tai kirjoita 'lopeta' lopettaaksesi.");
+        input = in.nextLine();
+        arvauksia++;
 
+        if (input.equalsIgnoreCase("lopeta")) {
+            System.out.println("Lopetit pelin.");
+            System.out.println("Arvauksia yhteensä: " + arvauksia + ".");
+            return;
+        }
+        } 
+        while (!input.equals(nimi));
+        System.out.println("Oikein!");
+        System.out.println("Arvauksia yhteensä: " + arvauksia + ".");
 }
 }
